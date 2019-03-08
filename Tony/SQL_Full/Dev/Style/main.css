@@ -1,0 +1,43 @@
+
+/*-----------------------------------------------Common------------------------------------------*/
+body{ font-size:10pt; font-family:"Arial"; padding:0; margin:0; color:#666; background:url(top.png) repeat-x 0 0 #252525}
+a{ text-decoration:none; color:#666; font-size:10pt;}
+a:hover{ text-decoration:underline}
+.btn_s{ background:url(btn_s.png) no-repeat 0 0; width:64px; height:24px; border:0; font-size:9pt}
+.btn_m{ background:url(btn_m.png) no-repeat 0 0; width:84px; height:24px; border:0; font-size:9pt}
+img{ border:0}
+        
+.main{ width:980px; overflow:hidden; margin:0 auto}
+
+.top{ height:30px; line-height:30px; background:#234B6F}
+.top h1{ font-size:10pt; color:#234B6F; font-weight:700; margin:0; padding:0; font-style: italic; letter-spacing:1px}
+.logo{ float:left; width:300px; margin:0 0 0 10px; position:absolute;}
+
+.header{ height:71px; width:100%; background:url(top.png) repeat-x 0 0; margin:0 auto; clear:both;}
+.header-wrap{ width:100%; margin:0 auto; overflow:hidden;}
+.header-right{ float:right; padding:20px 0 0 0;}
+.search{background:url(search_bg.png) no-repeat center 0; height:28px; width:200px}
+.keyword{ width:150px; margin:3px 0 0 0; border:0; padding:2px; background:url(search_bg.png) no-repeat -35px -3px; font-family:Tahoma; color:#666}
+
+.nav{ height:60px; width:100%; margin:0 auto}
+.nav-menu{ height:50px; font-family:"Microsoft YaHei","SimHei"; margin-left:10px}
+.nav-menu ul{ list-style:none; margin:0; padding:0}
+.nav-menu li,.nav-menu a{ background:url(nav.png) no-repeat; height:50px; line-height:52px}
+.nav-menu li{ list-style-type:none; float:left; text-align:center; background-position:right top; margin-right:3px; width:120px}
+.nav-menu a{ color:#333; font-weight:700; display:block; font-size:11pt; letter-spacing:1px}
+.nav-menu a:hover{ text-decoration:none; background:url(nav_over.png) no-repeat}
+.nav-menu a span{ padding-left:2px}
+.nav-menu .focus{ background:url(nav_focus.png) no-repeat}
+.nav-menu .focus a{ background:url(nav_focus.png) no-repeat}
+.nav-menu .focus{ background-position:right top;}
+.nav-menu .focus .shadow{position:relative; color:#333}
+.nav-menu .focus .shadow span{position:absolute; left:-1px; top:-17px; color:#fff}
+
+.content-info{ padding:10px; font-style:italic; font-size:12pt; color:#333}
+.content-wrap{ background:#EFEFEF; overflow:hidden; padding:0 0 10px 10px}
+.content{ width:100%; margin:0 auto; overflow:hidden}
+
+.bottom{ width:100%; color:#999; background:url(bottom_bg1.png) no-repeat 0 bottom #252525; height:80px}
+.bottom a{ color:#999;}
+.bottom-nav{ width:100%; margin:0 auto; text-align:left; padding:10px; letter-spacing:1px}
+.copyright{ width:100%; margin:0 auto; text-align:left; font-size:9pt; color:#999; line-height:40px; height:50px}

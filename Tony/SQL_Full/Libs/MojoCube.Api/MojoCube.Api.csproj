@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4ECD4C18-A117-434A-8A3E-3220A5513304}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MojoCube.Api</RootNamespace>
+    <AssemblyName>MojoCube.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.3.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Convert.cs" />
+    <Compile Include="Data\Sql.cs" />
+    <Compile Include="Date\Get.cs" />
+    <Compile Include="File\Function.cs" />
+    <Compile Include="File\IO.cs" />
+    <Compile Include="File\Upload.cs" />
+    <Compile Include="Html\AspxToHtml.cs" />
+    <Compile Include="Html\Header.cs" />
+    <Compile Include="Http\Cookies.cs" />
+    <Compile Include="Mail\Normal.cs" />
+    <Compile Include="Mail\Thread.cs" />
+    <Compile Include="Mail\WebMail.cs" />
+    <Compile Include="Math\Array.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Text\BaseControlAdapter.cs" />
+    <Compile Include="Text\CheckSql.cs" />
+    <Compile Include="Text\Content.cs" />
+    <Compile Include="Text\Function.cs" />
+    <Compile Include="Text\RegexClass.cs" />
+    <Compile Include="Text\Security.cs" />
+    <Compile Include="UI\AdminGridView.cs" />
+    <Compile Include="UI\AdminPager.cs" />
+    <Compile Include="UI\AdminRadioButton.cs" />
+    <Compile Include="UI\ColorPicker.cs" />
+    <Compile Include="UI\DropDown.cs" />
+    <Compile Include="UI\Language.cs" />
+    <Compile Include="UI\MyPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Script.cs" />
+    <Compile Include="UI\WebPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\WebPager.cs" />
+    <Compile Include="XML\Rss.cs" />
+    <Compile Include="XML\SiteMap.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,50 @@
+<%@ Page Language="C#" MasterPageFile="~/Admin/Main.master" AutoEventWireup="true" CodeFile="List.aspx.cs" Inherits="Admin_Site_Template_List" %>
+
+<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphMain" Runat="Server">
+
+<div id="tab">
+        <ul>
+            <li class="Current"><a href="#" onfocus="this.blur()"><span>模板列表</span></a></li></ul>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><a href="Edit.aspx" onfocus="this.blur()" rel="gb_pageset[search_sites]" title="新增模板"><span><img src="../../Images/Icon/add.gif" alt="Add" />新增模板</span></a></li>
+            <li><a href="List.aspx"><span><img src="../../Images/Icon/refresh_blue.gif" alt="Refresh" />刷新</span></a></li>
+        </ul>
+    </div>
+    
+    <div id="middle">
+
+        <div id="pager">
+           <webdiyer:AspNetPager ID="ListPager" runat="server"></webdiyer:AspNetPager>
+        </div>
+        
+       <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" GridLines="None" BorderWidth="0" AllowSorting="True" CssClass="gridview" OnSorting="GridView1_Sorting" OnRowDataBound="GridView1_RowDataBound" OnRowCommand="GridView1_RowCommand" OnRowCreated="GridView1_RowCreated">
+            <Columns>
+                <asp:TemplateField HeaderText="ID" SortExpression="pk_ID">
+                    <ItemTemplate>
+                        <asp:Label ID="lblID" runat="server" Text='<%# Bind("pk_ID") %>'></asp:Label>
+                    </ItemTemplate>
+                    <ItemStyle CssClass="id" />
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="标题" SortExpression="Title">
+                    <ItemTemplate>
+                        <asp:Label ID="lblTitle" runat="server" Text='<%# Bind("Title") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="操作">
+                    <ItemTemplate>
+                        <asp:HyperLink ID="gvEdit" runat="server" ToolTip='<%# Bind("Title") %>' rel="gb_pageset[search_sites]"><img src="../../Images/Icon/edit.gif" alt="Edit" /></asp:HyperLink>
+                        <asp:LinkButton ID="gvDelete" runat="server" OnClientClick="javascript:return confirm('删除该记录将不能恢复，确定删除吗？')" ToolTip="删除" CommandName="_delete"><img src="../../Images/Icon/delete.gif" alt="Delete" /></asp:LinkButton>
+                    </ItemTemplate>
+                    <ItemStyle CssClass="operation" />
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+
+    </div>
+    
+</asp:Content>

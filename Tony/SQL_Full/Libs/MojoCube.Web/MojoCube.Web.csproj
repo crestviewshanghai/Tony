@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A66991CF-6519-4BF7-8CAC-5197E4958636}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MojoCube.Web</RootNamespace>
+    <AssemblyName>MojoCube.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJson, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Album\Category.cs" />
+    <Compile Include="Album\Image.cs" />
+    <Compile Include="Album\List.cs" />
+    <Compile Include="Article\Category.cs" />
+    <Compile Include="Article\List.cs" />
+    <Compile Include="Comment\List.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="Content\List.cs" />
+    <Compile Include="Download\Category.cs" />
+    <Compile Include="Download\List.cs" />
+    <Compile Include="Express\Function.cs" />
+    <Compile Include="Express\Kd100.cs" />
+    <Compile Include="Express\KdNiao.cs" />
+    <Compile Include="Express\List.cs" />
+    <Compile Include="GetClass.cs" />
+    <Compile Include="Image\Category.cs" />
+    <Compile Include="Image\List.cs" />
+    <Compile Include="IP.cs" />
+    <Compile Include="Job\Category.cs" />
+    <Compile Include="Job\List.cs" />
+    <Compile Include="Mail\Account.cs" />
+    <Compile Include="Mail\Receive.cs" />
+    <Compile Include="Mail\Template.cs" />
+    <Compile Include="Member\Cart.cs" />
+    <Compile Include="Member\Favorite.cs" />
+    <Compile Include="Member\List.cs" />
+    <Compile Include="Member\Mail.cs" />
+    <Compile Include="Member\Message.cs" />
+    <Compile Include="Member\Online.cs" />
+    <Compile Include="Memo\List.cs" />
+    <Compile Include="Order\Item.cs" />
+    <Compile Include="Order\List.cs" />
+    <Compile Include="Order\Log.cs" />
+    <Compile Include="Payment\Alipay\Function.cs" />
+    <Compile Include="Payment\Alipay\Notify.cs" />
+    <Compile Include="Payment\Alipay\Service.cs" />
+    <Compile Include="Payment\List.cs" />
+    <Compile Include="Payment\WxPay\HttpService.cs" />
+    <Compile Include="Payment\WxPay\Log.cs" />
+    <Compile Include="Payment\WxPay\MD5Util.cs" />
+    <Compile Include="Payment\WxPay\OrderDetail.cs" />
+    <Compile Include="Payment\WxPay\QueryOrder.cs" />
+    <Compile Include="Payment\WxPay\TenpayUtil.cs" />
+    <Compile Include="Payment\WxPay\UnifiedOrder.cs" />
+    <Compile Include="Payment\WxPay\WxPayConfig.cs" />
+    <Compile Include="Payment\WxPay\WxPayData.cs" />
+    <Compile Include="Payment\WxPay\WxPayException.cs" />
+    <Compile Include="Product\Category.cs" />
+    <Compile Include="Product\Image.cs" />
+    <Compile Include="Product\List.cs" />
+    <Compile Include="ReplaceText.cs" />
+    <Compile Include="Role\List.cs" />
+    <Compile Include="Role\Name.cs" />
+    <Compile Include="Site\Banner.cs" />
+    <Compile Include="Site\Cache.cs" />
+    <Compile Include="Site\Config.cs" />
+    <Compile Include="Site\Link.cs" />
+    <Compile Include="Site\Log.cs" />
+    <Compile Include="Site\Menu.cs" />
+    <Compile Include="Site\Search.cs" />
+    <Compile Include="Site\Service.cs" />
+    <Compile Include="SMS\Function.cs" />
+    <Compile Include="SMS\GetInfo.cs" />
+    <Compile Include="SMS\List.cs" />
+    <Compile Include="SMS\Log.cs" />
+    <Compile Include="SMS\Send.cs" />
+    <Compile Include="Sql.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="String.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sys\Express.cs" />
+    <Compile Include="Sys\Menu.cs" />
+    <Compile Include="Sys\Notice.cs" />
+    <Compile Include="Sys\StatusID.cs" />
+    <Compile Include="Sys\TypeID.cs" />
+    <Compile Include="User\Department.cs" />
+    <Compile Include="User\List.cs" />
+    <Compile Include="User\Log.cs" />
+    <Compile Include="User\Login.cs" />
+    <Compile Include="User\Online.cs" />
+    <Compile Include="User\Position.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MojoCube.Api\MojoCube.Api.csproj">
+      <Project>{4ECD4C18-A117-434A-8A3E-3220A5513304}</Project>
+      <Name>MojoCube.Api</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

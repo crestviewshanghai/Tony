@@ -1,0 +1,5 @@
+..\..\Bin\MojoCube.Api.dll
+..\..\Bin\MojoCube.Api.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\MojoCube.Api.dll
+obj\Debug\MojoCube.Api.pdb

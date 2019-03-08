@@ -1,0 +1,197 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Admin_Commons_Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <link rel="shortcut icon" href="../Images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../Skins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../Css/ionicons.min.css" />
+    <link rel="stylesheet" href="../Skins/dist/css/AdminLTE.min.css" />
+    <%=skinCss%>
+    <link rel="stylesheet" href="../Css/main.css" />
+    <!--[if lt IE 9]>
+        <script src="../JS/html5shiv.min.js"></script>
+        <script src="../JS/respond.min.js"></script>
+    <![endif]-->
+    <script src="../JS/My97DatePicker/WdatePicker.js"></script>
+    <script src="../JS/mojocube.js"></script>
+  </head>
+
+  <body class="hold-transition skin-<%=skin%> sidebar-mini">
+
+    <div class="wrapper">
+
+      <header class="main-header">
+
+        <a href="../../Admin/Dashboard/Default.aspx" class="logo">
+          <span class="logo-mini"><img src="../Images/logo_1.png" /></span>
+          <span class="logo-lg"><img src="../Images/logo.png" /></span>
+        </a>
+
+        <nav class="navbar navbar-static-top" role="navigation">
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <!-- Navbar Right Menu -->
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+            
+              <!-- 选择语言 -->
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <asp:Image ID="imgLanguage" runat="server"></asp:Image>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="user-footer">
+                    <div id="LanguageDiv" runat="server"></div>
+                  </li>
+                </ul>
+              </li>
+              
+              <!-- 用户面板 -->
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <asp:Image ID="imgPortrait1" runat="server" CssClass="user-image"></asp:Image>
+                  <span class="hidden-xs"><asp:Label ID="lblFullName1" runat="server"></asp:Label></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="user-header">
+                    <asp:Image ID="imgPortrait3" runat="server" CssClass="img-circle"></asp:Image>
+                    <p>
+                      <asp:Label ID="lblPosition" runat="server"></asp:Label> / 
+                      <asp:Label ID="lblDepartment" runat="server"></asp:Label>
+                      <small><asp:Label ID="lblRoleName" runat="server"></asp:Label></small>
+                    </p>
+                  </li>
+                  <li class="user-footer">
+                    <div class="pull-left">
+                      <a href="../User/Profile.aspx" class="btn btn-default btn-flat">用户面板</a>
+                    </div>
+                    <div class="pull-right">
+                      <a href="../Logout.aspx" class="btn btn-default btn-flat" style="background:#D73925; color:#fff; border:solid 1px #D73925">退出登录</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              
+              <!-- 打开网址 -->
+              <li class="dropdown notifications-menu">
+                <a href="../../" class="dropdown-toggle" title="网站" target="_blank">
+                  <i class="fa fa-home"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" data-toggle="control-sidebar"><i class="fa fa-history"></i></a>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+      </header>
+      
+     <form id="form1" runat="server">
+
+      <!-- 左侧菜单 -->
+      <aside class="main-sidebar">
+
+        <section class="sidebar">
+
+          <div class="user-panel" style="height:60px; margin-top:5px;">
+            <div class="pull-left image">
+                <asp:Image ID="imgPortrait2" runat="server" CssClass="img-circle"></asp:Image>
+            </div>
+            <div class="pull-left info">
+              <p><asp:Label ID="lblFullName2" runat="server"></asp:Label></p>
+              <a href="../User/Online.aspx?active=12,81"><i class="fa fa-circle text-success"></i> 在线</a>
+            </div>
+          </div>
+          
+          <div class="sidebar-form">
+              <div class="input-group">
+                  <asp:TextBox ID="txtKeyword" runat="server" CssClass="form-control" placeholder="查找..."></asp:TextBox>
+                  <span class="input-group-btn">
+                    <asp:LinkButton ID="lnbSearch" runat="server" CssClass="btn btn-flat" onclick="lnbSearch_Click"><i class="fa fa-search"></i></asp:LinkButton>
+                  </span>
+              </div>
+          </div>
+
+          <div id="LeftMenu" runat="server"></div>
+              
+        </section>
+      </aside>
+
+      <!-- 内容 -->
+      <div>
+          <asp:ContentPlaceHolder id="cphMain" runat="server"></asp:ContentPlaceHolder>
+      </div>
+
+     </form>
+
+      <footer class="main-footer">
+        <div id="Welcome" runat="server" class="pull-right hidden-xs">
+        </div>
+        <strong>Copyright &copy; <asp:Label ID="lblYear" runat="server"></asp:Label> <asp:HyperLink ID="hlCopyright" runat="server"></asp:HyperLink>.</strong> All rights reserved.
+      </footer>
+
+      <!-- 历史记录 -->
+      <aside class="control-sidebar control-sidebar-dark">
+
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+          <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-history"></i> 历史记录</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+
+          <div class="tab-pane active" id="control-sidebar-home-tab">
+
+            <ul id="MyHistory" runat="server" class="control-sidebar-menu"></ul>
+
+            <div style="text-align:center;">
+                <a href="../User/History.aspx">更多记录...</a>
+            </div>
+
+          </div>
+
+        </div>
+      </aside>
+
+      <div class="control-sidebar-bg"></div>
+    </div>
+
+    <script src="../Skins/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="../Skins/plugins/jQueryUI/jquery-ui.min.js"></script>
+    <script src="../Skins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../Skins/dist/js/app.min.js"></script>
+    
+    <script src="../Skins/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_flat-<%=skin%>',
+                radioClass: 'iradio_flat-<%=skin%>',
+                increaseArea: '20%'
+            });
+        });
+    </script>
+
+	<script type="text/javascript" src="../JS/Fancybox/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="../JS/Fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".fancybox").fancybox({
+                parent: "form:first"
+            });
+        });
+	</script>
+
+    <script src="../Skins/dist/js/pages/dashboard.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,34 @@
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            if (Request.QueryString["id"] != null)
+            {
+                ViewState["ID"] = MojoCube.Api.Text.Security.DecryptString(Request.QueryString["id"]);
+                MojoCube.Site.Template.List template = new MojoCube.Site.Template.List();
+                template.GetData(int.Parse(ViewState["ID"].ToString()));
+
+		lblTitle.Text = MojoCube.Api.Text.Function.SubString(template.Title, 5);
+                txtTitle.Text = template.Title;
+            }
+        }
+    }
+
+    protected void lnbSave_Click(object sender, EventArgs e)
+    {
+        MojoCube.Site.Template.List template = new MojoCube.Site.Template.List();
+        template.Title = txtTitle.Text.Trim();
+
+        //update
+        if (ViewState["ID"] != null)
+        {
+            template.UpdateData(int.Parse(ViewState["ID"].ToString()));
+        }
+        //insert
+        else
+        {
+            ViewState["ID"] = template.InsertData();
+        }
+
+            MojoCube.Api.UI.Script.RunScript(this, "window.location.href='../../Info.aspx?type=3&url=Site/Template/List.aspx&back=Site/Template/Edit.aspx&backid=" + ViewState["ID"].ToString() + "'");
+    }

@@ -1,0 +1,40 @@
+<%@ Page Language="C#" MasterPageFile="~/Admin/Main.master" AutoEventWireup="true" CodeFile="Edit.aspx.cs" Inherits="Admin_Site_Template_Edit" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphMain" Runat="Server">
+
+<div id="tab">
+        <ul>
+            <li class="Current"><a href="#" onfocus="this.blur()"><asp:Label ID="lblTitle" runat="server" Text="新增模板"></asp:Label></a></li></ul>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><asp:LinkButton ID="lnbSave" runat="server" OnClick="lnbSave_Click"><span><img src="../../Images/Icon/save.gif" alt="Save" />保存</span></asp:LinkButton></li></ul>
+    </div>
+    
+    <div id="middle">
+    
+    <div class="editor">
+        <table class="eTable">
+            <tr class="eTr">
+                <td class="name">
+                    启用</td>
+                <td>
+                    <asp:CheckBox ID="cbIsUse" runat="server" Text="启用" style="margin:0 0 0 -3px" Checked="true" />
+                    </td>
+            </tr>
+            <tr class="eTr">
+                <td class="name">
+                    标题</td>
+                <td>
+                    <asp:TextBox ID="txtTitle" runat="server" CssClass="input"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvMenuName" runat="server" ControlToValidate="txtTitle"
+                        ErrorMessage="RequiredFieldValidator" CssClass="Validator" Display="Dynamic"><img src="../../Images/Icon/check_error.gif" alt="" /></asp:RequiredFieldValidator>
+                    </td>
+            </tr>
+        </table>
+    </div>
+    
+    </div>
+    
+</asp:Content>

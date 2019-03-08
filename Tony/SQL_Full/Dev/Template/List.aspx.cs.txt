@@ -1,0 +1,68 @@
+ protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            ViewState["OrderByKey"] = "pk_TableName";
+            ViewState["OrderByType"] = true;
+            GridBind();
+        }
+    }
+
+    private void GridBind()
+    {
+        MojoCube.Api.UI.AdminPager pager = new MojoCube.Api.UI.AdminPager(ListPager);
+        pager.PageSize = MojoCube.Admin.String.PageSize();
+        pager.ConnStr = MojoCube.Admin.Connection.ConnString();
+        pager.TableName = "TableName";
+        pager.strGetFields = "*";
+        pager.fldName = ViewState["OrderByKey"].ToString();
+        pager.OrderType = (bool)ViewState["OrderByType"];
+
+        GridView1.DataSource = pager.GetTable();
+        GridView1.DataBind();
+    }
+
+    protected void GridView1_Sorting(object sender, GridViewSortEventArgs e)
+    {
+        string sPage = e.SortExpression;
+        if (ViewState["OrderByKey"].ToString() == sPage)
+        {
+            if ((bool)ViewState["OrderByType"])
+                ViewState["OrderByType"] = false;
+            else
+                ViewState["OrderByType"] = true;
+        }
+        else
+        {
+            ViewState["OrderByKey"] = e.SortExpression;
+        }
+        GridBind();
+    }
+
+    protected void GridView1_RowCreated(object sender, GridViewRowEventArgs e)
+    {
+        MojoCube.Api.UI.AdminGridView.SetSortingRowCreated(e, (string)ViewState["OrderByKey"], (bool)ViewState["OrderByType"], GridView1);
+        string[] list ={ "gvDelete" };
+        MojoCube.Api.UI.AdminGridView.SetDataRow(e, list);
+    }
+
+    protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowType == DataControlRowType.DataRow)
+        {
+            ((HyperLink)e.Row.FindControl("gvEdit")).NavigateUrl = "Edit.aspx?id=" + MojoCube.Api.Text.Security.EncryptString(((Label)e.Row.FindControl("lblID")).Text);
+        }
+    }
+
+    protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        MojoCube.Site.Template.List template = new MojoCube.Site.Template.List();
+        int index = 0;
+        //delete
+        if (e.CommandName == "_delete")
+        {
+            index = Convert.ToInt32(e.CommandArgument);
+            template.DeleteData(int.Parse(((Label)GridView1.Rows[index].FindControl("lblID")).Text));
+        }
+        GridBind();
+    }

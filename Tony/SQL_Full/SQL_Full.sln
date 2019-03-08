@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SQL_Full", ".", "{955C7365-228F-4298-B131-E338C775636C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/SQL_Full"
+		Debug.AspNetCompiler.PhysicalPath = "E:\MojoCube\Products\B001\SQL_Full\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\SQL_Full\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/SQL_Full"
+		Release.AspNetCompiler.PhysicalPath = "E:\MojoCube\Products\B001\SQL_Full\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\SQL_Full\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3021"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MojoCube.Api", "Libs\MojoCube.Api\MojoCube.Api.csproj", "{4ECD4C18-A117-434A-8A3E-3220A5513304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MojoCube.Web", "Libs\MojoCube.Web\MojoCube.Web.csproj", "{A66991CF-6519-4BF7-8CAC-5197E4958636}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{955C7365-228F-4298-B131-E338C775636C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{955C7365-228F-4298-B131-E338C775636C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{955C7365-228F-4298-B131-E338C775636C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{955C7365-228F-4298-B131-E338C775636C}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{4ECD4C18-A117-434A-8A3E-3220A5513304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ECD4C18-A117-434A-8A3E-3220A5513304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ECD4C18-A117-434A-8A3E-3220A5513304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ECD4C18-A117-434A-8A3E-3220A5513304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A66991CF-6519-4BF7-8CAC-5197E4958636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66991CF-6519-4BF7-8CAC-5197E4958636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66991CF-6519-4BF7-8CAC-5197E4958636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66991CF-6519-4BF7-8CAC-5197E4958636}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
