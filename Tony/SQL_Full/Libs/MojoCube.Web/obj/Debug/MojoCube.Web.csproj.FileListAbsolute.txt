@@ -17,3 +17,8 @@ E:\eShop\SQL_Full\Bin\MojoCube.Web.pdb
 E:\eShop\SQL_Full\Libs\MojoCube.Web\obj\Debug\MojoCube.Web.csprojResolveAssemblyReference.cache
 E:\eShop\SQL_Full\Libs\MojoCube.Web\obj\Debug\MojoCube.Web.dll
 E:\eShop\SQL_Full\Libs\MojoCube.Web\obj\Debug\MojoCube.Web.pdb
+E:\Projects\MyProjects\GitHub\Tony\SQL_Full\Bin\MojoCube.Web.dll
+E:\Projects\MyProjects\GitHub\Tony\SQL_Full\Bin\MojoCube.Web.pdb
+E:\Projects\MyProjects\GitHub\Tony\SQL_Full\Libs\MojoCube.Web\obj\Debug\MojoCube.Web.csprojResolveAssemblyReference.cache
+E:\Projects\MyProjects\GitHub\Tony\SQL_Full\Libs\MojoCube.Web\obj\Debug\MojoCube.Web.dll
+E:\Projects\MyProjects\GitHub\Tony\SQL_Full\Libs\MojoCube.Web\obj\Debug\MojoCube.Web.pdb
