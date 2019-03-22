@@ -36,3 +36,8 @@ E:\Projects\MyProjects\GitHub\Tony\SQL_Full\Bin\MojoCube.Api.dll
 E:\Projects\MyProjects\GitHub\Tony\SQL_Full\Bin\MojoCube.Api.pdb
 E:\Projects\MyProjects\GitHub\Tony\SQL_Full\Libs\MojoCube.Api\obj\Debug\MojoCube.Api.dll
 E:\Projects\MyProjects\GitHub\Tony\SQL_Full\Libs\MojoCube.Api\obj\Debug\MojoCube.Api.pdb
+E:\GitHubTony\trunk\Tony\SQL_Full\Bin\MojoCube.Api.dll
+E:\GitHubTony\trunk\Tony\SQL_Full\Bin\MojoCube.Api.pdb
+E:\GitHubTony\trunk\Tony\SQL_Full\Libs\MojoCube.Api\obj\Debug\MojoCube.Api.dll
+E:\GitHubTony\trunk\Tony\SQL_Full\Libs\MojoCube.Api\obj\Debug\MojoCube.Api.pdb
+E:\GitHubTony\trunk\Tony\SQL_Full\Libs\MojoCube.Api\obj\Debug\MojoCube.Api.csprojResolveAssemblyReference.cache

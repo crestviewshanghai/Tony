@@ -70,14 +70,14 @@
 
 
         <div class="post-block-container">
-            <a title="日本“殿堂级”设计大师，扎堆拍了部大片连火7年！竟是为孩子们......" class="post-block ng-scope" href="Product.aspx">
+            <a title="毒空气来袭，切记消毒除味" class="post-block ng-scope" href="Product.aspx">
                 <div class="post-category cat3">
-                    <div class="post-category-title ng-binding">匠心独具</div>
+                    <div class="post-category-title ng-binding">家居净化</div>
                 </div>
                 <div class="post-cover"style="display: block; background-image: url('Files/Site/Banner/2016070321450453121879.jpg');"></div>
-                <div class="padder padder-v-sm post-title font-bold ng-binding">日本“殿堂级”设计大师，扎堆拍了部大片连火7年！竟是为孩子们......</div>
+                <div class="padder padder-v-sm post-title font-bold ng-binding">毒空气来袭，切记消毒除味</div>
             </a>
-            <a title="日本竟然有这样的童话村庄...中国游客还未发现！" class="post-block ng-scope" href="Product.aspx">
+            <a title="毒空气来袭，切记消毒除味" class="post-block ng-scope" href="Product.aspx">
               <div class="post-category cat5">
                 <div class="post-category-title ng-binding">边走边看</div>
               </div>

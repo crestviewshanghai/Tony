@@ -498,6 +498,7 @@ footer a:hover{color:#7CBB00}
  .post-category .post-category-title {
     display: inline-block;
     position: relative;
+    font-size:16px;
 }
  .post-category .post-category-title:before {
     content: '';
@@ -540,7 +541,7 @@ footer a:hover{color:#7CBB00}
  .post-cover {
     width: 100%;
     padding-bottom: 43.75%;
-    background-position: top;
+    background-position: left top;
 }
  .font-bold {
     font-weight: 600;
